@@ -1,0 +1,36 @@
+README
+
+My first attempt was to write any piece of ruby script to solve the problem and nothing more. It had no respect for any of the three subobjectives. The bulk of that code is in "lib/kata_eight_genesis.rb". 
+
+READABILITY ("lib/kata_eight_readable.rb")
+	Number of Matches: 605
+	Time Taken: 57.909024
+
+SUB-OPTIMIZED 	("lib/kata_eight_sub_optimized.rb")
+	Remove carriage return characters
+	       user     system      total        real
+	   0.010000   0.000000   0.010000 (  0.010022)
+	Dictionary of all six letter words...
+	       user     system      total        real
+	   0.010000   0.000000   0.010000 (  0.004521)
+	       user     system      total        real
+	   0.960000   0.000000   0.960000 (  0.961954)
+	Number of Matches: 605
+	Time Taken: 1.702168
+
+OPTIMIZED 	("lib/kata_eight_optimized.rb")
+	Number of Matches: 605
+	Time Taken: 1.055241
+
+EXTENDABLE 	("lib/kata_eight_extendable.rb")
+	Number of Matches: 605
+	Time Taken: 1.031331
+
+
+Making the program as fast possible didn't leave any significant dent on the readability of the code. 
+Writing the program in a self-documenting style, and sprinkling syntatic sugar goodness wherever possible, made it easier to extend the program. Sub-programs/functions were easy to pluck out, thereby excusing us from the need to write a running commentary on precisely what's going on at any point in the script. 
+
+Making the program readable does indeed make it slow to execute. The program was writing to be both readable during runtime and readable for a third-party developer. The slouch in speed is down to our commitment to output the results of the program. 
+
+Extendind the program offered a blend of speed and readability shaving as much as ~200ms from the optimized code. The extendedable code is more readable than the designated readable code. 
+
